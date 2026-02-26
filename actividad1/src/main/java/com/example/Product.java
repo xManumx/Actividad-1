@@ -10,8 +10,18 @@ public class Product {
     public Product(String id, String name, double price, int stock) {
         this.id = id;
         this.name = name;
-        this.price = price >= 0 ? price : 0;
-        this.stock = stock >= 0 ? stock : 0;
+
+        if (price >= 0) {
+            this.price = price;
+        } else {
+            this.price = 0;
+        }
+
+        if (stock >= 0) {
+            this.stock = stock;
+        } else {
+            this.stock = 0;
+        }
     }
 
     public String getId() {
@@ -50,7 +60,6 @@ public class Product {
         }
     }
 
-    @Override
     public String toString() {
         return "Producto [ID: " + id +
                ", Nombre: " + name +
