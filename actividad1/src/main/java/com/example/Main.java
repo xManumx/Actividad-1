@@ -4,10 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Product p1 = new Product("P001", "Laptop", 112.0, 10);
+        Product p1 = new Product("P001", "Laptop", 102.56, 10);
         Product p2 = new Product("P002", "Mouse", 25.5, 50);
 
-        p1.setPrice(112.0);
+        p1.setPrice(102.56);
         p2.setStock(40);
 
         System.out.println(p1.getName());
